@@ -54,11 +54,9 @@ In Office 2013, the mailbox capability is supported in the Outlook rich client a
     
 5. The mail app defines an initialize function which is an event handler for the initialize event. When the run-time environment is loaded, the initialize event is fired, and the initialize function calls the main function of the mail app, init, as shown in the code below:
 
-
-    Office.initialize = function () {
-      init(Office.context.mailbox.item.getRegExMatches().VideoURL);
-    }
-
+        Office.initialize = function () {
+          init(Office.context.mailbox.item.getRegExMatches().VideoURL);
+        }
 
 The getRegExMatches method of the selected item returns an array of strings that match the regular expression VideoURL, which is specified in the manifest.xml file. In this case, that array contains URLs to videos on YouTube.
 
