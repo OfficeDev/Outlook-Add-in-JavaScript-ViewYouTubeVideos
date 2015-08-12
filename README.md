@@ -3,6 +3,7 @@
 ## Summary
 This mail app allows users to conveniently view YouTube videos in the app pane in Outlook, if the selected email message or appointment contains a URL to a video on YouTube. The following figure is a screen shot of the YouTube mail app activated for a message in the Reading Pane.
 <br />
+<br />
 ![](/static/pic1.png)
 
 ## Prerequisites
