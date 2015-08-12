@@ -42,7 +42,11 @@ Select the manifest.xml|Install and continue
 * Questions about Office Add-in development in general should be posted to [Stack Overflow](http://stackoverflow.com/questions/tagged/office-addins). Make sure that your questions or comments are tagged with [office-addins].
 
 ## Additional resources
-* Add some links here
+* [Apps for Outlook](https://dev.office.com/code-samples#?filters=web,outlook)
+* [Outlook API](https://dev.outlook.com/)
+* [Code Samples - Office Dev Center](https://dev.office.com/code-samples#?filters=web,outlook)
+* [Latest News - Office Dev Center](http://dev.office.com/latestnews)
+* [Training - Office Dev Center](https://dev.office.com/training)
 
 ## Copyright
     The MIT License (MIT)
