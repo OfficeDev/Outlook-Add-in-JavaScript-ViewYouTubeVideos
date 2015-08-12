@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MailApp">
+  <Id>971E76EF-D73E-567F-ADAE-9876B39052CF</Id>
+  <Version>1.0</Version>
+  <ProviderName>Microsoft</ProviderName>
+  <DefaultLocale>en-us</DefaultLocale>
+  <DisplayName DefaultValue="YouTube"/>
+  <Description DefaultValue="Watch YouTube videos referenced in the e-mails you receive without leaving your email client.">
+    <Override Locale="fr-fr" Value="Visualisez les vidéos YouTube référencées dans vos courriers électronique directement depuis Outlook et Outlook Web App."/>
+  </Description>
+  <IconUrl DefaultValue="<?bash $ip ?>/res/img/YouTubeLogo.png"/>
+  <Capabilities>
+    <Capability Name="Mailbox"/>
+  </Capabilities>
+  <DesktopSettings>
+      <SourceLocation DefaultValue="<?bash $ip ?>/youTube.html"/>
+    <RequestedHeight>216</RequestedHeight>
+  </DesktopSettings>
+  <TabletSettings>
+      <SourceLocation DefaultValue="<?bash $ip ?>/youTube.html"/>
+    <RequestedHeight>216</RequestedHeight>
+  </TabletSettings>
+  <Permissions>ReadItem</Permissions>
+  <Rule xsi:type="ItemHasRegularExpressionMatch" PropertyName="BodyAsPlaintext" RegExName="VideoURL" RegExValue="https?://(((www\.)?youtube\.com/watch\?v=)|(youtu\.be/))[a-zA-Z0-9_-]{11}"/>
+</OfficeApp>

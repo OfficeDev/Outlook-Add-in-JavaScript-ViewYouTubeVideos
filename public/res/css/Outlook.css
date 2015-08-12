@@ -1,0 +1,8 @@
+﻿html, body { height: 100%; margin: 0px; padding: 0px;}
+html {scrollbar-base-color:  white; scrollbar-arrow-color: #ababab; scrollbar-lightshadow-color:  #ababab; scrollbar-highlight-color: #ababab; scrollbar-darkshadow-color: white; scrollbar-track-color: white;}
+.divscroll-outer { height: 100%; overflow: auto;}
+.title{	font-family: arial, sans-serif; 	color: blue;	font-size:  12pt;        text-decoration:none;font-weight:bold;}
+.property{	font-family:Segoe UI; 	color: black;	font-size:  10pt;        text-decoration:none;}
+.command { font-family:Segoe UI; color: black; font-size:10pt; text-decoration:none; font-style:italic; border-top:6px;}
+.value{	font-family:Segoe UI; 	color: gray;	font-size:  10pt;        text-decoration:none;}
+.valuesmall{	font-family: Segoe UI; 	color: gray;	font-size:  8pt;        text-decoration:none;}

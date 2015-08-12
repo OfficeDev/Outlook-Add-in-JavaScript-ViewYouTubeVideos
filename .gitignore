@@ -1,0 +1,7 @@
+Thumbs.db
+.DS_Store
+/manifest.xml
+/app.rb
+*.crt
+*.key
+.bundle
