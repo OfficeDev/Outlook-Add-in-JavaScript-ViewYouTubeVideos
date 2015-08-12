@@ -58,9 +58,9 @@ In Office 2013, the mailbox capability is supported in the Outlook rich client a
           init(Office.context.mailbox.item.getRegExMatches().VideoURL);
         }
 
-The getRegExMatches method of the selected item returns an array of strings that match the regular expression VideoURL, which is specified in the manifest.xml file. In this case, that array contains URLs to videos on YouTube.
+The ```getRegExMatches``` method of the selected item returns an array of strings that match the regular expression ```VideoURL```, which is specified in the ```manifest.xml``` file. In this case, that array contains URLs to videos on YouTube.
 
-6. The init function and the rest of the youtube.htm file take as an input parameter that array of YouTube URLs and dynamically build the HTML to display the corresponding thumbnail and details for each video.
+6. The init function and the rest of the ```youtube.html``` file take as an input parameter that array of YouTube URLs and dynamically build the HTML to display the corresponding thumbnail and details for each video.
 
 This dynamically built HTML displays the first video in a YouTube embedded player, together with details about the video. The app pane also displays the thumbnails of any subsequent videos. The end user can choose a thumbnail to view any of the videos in the YouTube embedded player, without leaving the host application.
 
