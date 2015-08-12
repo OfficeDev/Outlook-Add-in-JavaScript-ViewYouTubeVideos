@@ -14,7 +14,12 @@ This mail app allows users to conveniently view YouTube videos in the app pane i
 * Client applications that support the mailbox capability in Office 2013, on the desktop and tablet form factors: Outlook 2013, Outlook Web App
 
 ## Key components of the sample
-* Talk about the import parts here!
+* ```/LICENSE.txt``` The terms and conditions of using this distributable
+* ```/config.ru``` Rack config
+* ```setup.sh``` Setup script to generate app.rb, manifest.xml, and optionally, a certificate
+* ```/cert/ss_certgen.sh``` Self-signed certificate generating script
+* ```/public/res/js/strings_en-us.js``` US English localization
+* ```/public/res/js/strings_fr-fr.js``` French localization
 
 ## Description of the code
 * How does the sample work
