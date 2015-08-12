@@ -16,7 +16,7 @@ This mail app allows users to conveniently view YouTube videos in the app pane i
 ## Key components of the sample
 * ```/LICENSE.txt``` The terms and conditions of using this distributable
 * ```/config.ru``` Rack config
-* ```setup.sh``` Setup script to generate app.rb, manifest.xml, and optionally, a certificate
+* ```setup.sh``` Setup script to generate ```app.rb```, ```manifest.xml```, and optionally, a certificate
 * ```/cert/ss_certgen.sh``` Self-signed certificate generating script
 * ```/public/res/js/strings_en-us.js``` US English localization
 * ```/public/res/js/strings_fr-fr.js``` French localization
