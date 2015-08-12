@@ -1,4 +1,4 @@
-# Outlook-Add-in-Javascript-ViewYouTubeVideos
+# Outlook-Add-in-JavaScript-ViewYouTubeVideos
 
 ## Summary
 This mail app allows users to conveniently view YouTube videos in the app pane in Outlook, if the selected email message or appointment contains a URL to a video on YouTube. The following figure is a screen shot of the YouTube mail app activated for a message in the Reading Pane.
@@ -7,7 +7,8 @@ This mail app allows users to conveniently view YouTube videos in the app pane i
 
 ## Prerequisites
 * Bash
-* Ruby 2.2.1+
+* Bundler 1.10.x+
+* Ruby 2.2.x+
 * OpenSSL
 * An email account on Exchange Server 2013
 * Client applications that support the mailbox capability in Office 2013, on the desktop and tablet form factors: Outlook 2013, Outlook Web App
