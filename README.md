@@ -24,6 +24,16 @@ This mail app allows users to conveniently view YouTube videos in the app pane i
 * Run the configure script
 * Add the self signed cert to Keychain (or similar) - just make it 'trusted'
 * Fire up the server
+* Install
+
+Manage apps menu|Install from file
+:-:|:-:
+![](/static/menu_loc.png)|![](/static/menu_opt.png)
+
+Select the manifest.xml|Install and continue
+:-:|:-:
+![](/static/menu_chooser.png)|![](/static/menu_warn.png)
+
 * Crack open your Outlook native client and run it
 
 ## Questions and comments
