@@ -68,6 +68,11 @@ This dynamically built HTML displays the first video in a YouTube embedded playe
 * Check it out
 * Run the configure script
 * Add the self signed cert to Keychain (or similar) - just make it 'trusted'
+
+Open Safari|'Trust' your self-signed certificate
+:-:|:-:
+![](/static/show_cert.png)|![](/static/add_trust.png)
+
 * Fire up the server
 * Install
 
