@@ -8,7 +8,6 @@ This mail app allows users to conveniently view YouTube videos in the app pane i
 
 ## Prerequisites
 * Bash
-* Bundler 1.10.x+
 * Ruby 2.2.x+
 * OpenSSL
 * An email account on Exchange Server 2013
