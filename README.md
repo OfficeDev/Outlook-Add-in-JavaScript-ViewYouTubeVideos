@@ -99,9 +99,7 @@ Open Safari|
 :-:|
 ![](/static/add_trust.png)|
 
-* Fire up the server
-* Install
-
+## Install the Add-In to Office 365
 Manage apps menu|Install from file
 :-:|:-:
 ![](/static/menu_loc.png)|![](/static/menu_opt.png)
