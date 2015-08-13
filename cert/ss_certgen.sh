@@ -37,7 +37,7 @@ function strip_pass {
 
 # Generate cert
 function gen_cert {
-openssl x509 -req -days $DAYS -in $OUT/$CSR -signkey $OUT/$KEY -out $OUT/$CERT;
+  openssl x509 -req -days $DAYS -in $OUT/$CSR -signkey $OUT/$KEY -out $OUT/$CERT;
 }
 
 # Copies the completed cert up

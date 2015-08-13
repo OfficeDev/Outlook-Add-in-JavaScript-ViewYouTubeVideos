@@ -9,7 +9,7 @@ This mail app allows users to conveniently view YouTube videos in the app pane i
 ## Prerequisites
 * Bash
 * Ruby 2.2.x+
-* Bundler
+* [Bundler](http://bundler.io/v1.5/gemfile.html)
 * OpenSSL
 * An email account on Exchange Server 2013
 * Client applications that support the mailbox capability in Office 2013, on the desktop and tablet form factors: Outlook 2013, Outlook Web App
@@ -77,8 +77,9 @@ This dynamically built HTML displays the first video in a YouTube embedded playe
 
 ## Setup
 Shipped with this sample is a ```setup.sh``` - this setup file does the following:
-* [Generates the ```manifest.xml```](https://github.com/OfficeDev/Outlook-Add-in-JavaScript-ViewYouTubeVideos/blob/master/setup.sh#L22)
-* [Generates the ```app.rb```](https://github.com/OfficeDev/Outlook-Add-in-JavaScript-ViewYouTubeVideos/blob/master/setup.sh#L29)
+* Verifies and installs [dependencies](https://github.com/OfficeDev/Outlook-Add-in-JavaScript-ViewYouTubeVideos/blob/master/setup.sh#L23)
+* [Generates the ```manifest.xml```](https://github.com/OfficeDev/Outlook-Add-in-JavaScript-ViewYouTubeVideos/blob/master/setup.sh#L29)
+* [Generates the ```app.rb```](https://github.com/OfficeDev/Outlook-Add-in-JavaScript-ViewYouTubeVideos/blob/master/setup.sh#L36)
 * [Optionally](https://github.com/OfficeDev/Outlook-Add-in-JavaScript-ViewYouTubeVideos/blob/master/setup.sh#L34) generates a [self-signed certificate](https://github.com/OfficeDev/Outlook-Add-in-JavaScript-ViewYouTubeVideos/blob/master/cert/ss_certgen.sh#L53)
 
 To run the script, type at your POSIX-compliant terminal:
