@@ -80,8 +80,14 @@ Shipped with this sample is a ```setup.sh``` - this setup file does the followin
 * [Generates the ```app.rb```](https://github.com/OfficeDev/Outlook-Add-in-JavaScript-ViewYouTubeVideos/blob/master/setup.sh#L29)
 * [Optionally](https://github.com/OfficeDev/Outlook-Add-in-JavaScript-ViewYouTubeVideos/blob/master/setup.sh#L34) generates a [self-signed certificate](https://github.com/OfficeDev/Outlook-Add-in-JavaScript-ViewYouTubeVideos/blob/master/cert/ss_certgen.sh#L53)
 
-* Run the configure script
-* Add the self signed cert to Keychain (or similar) - just make it 'trusted'
+To run the script, type at your POSIX-compliant terminal:
+
+    $ bash setup.sh
+    
+## Start the server
+From the project root, run:
+
+    $ rackup
 
 ## Trust your self-signed certificate
 
