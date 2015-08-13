@@ -22,7 +22,14 @@ function clean {
 # Install dependencies
 function exec_bundler {
   echo "Checking dependencies"
-  sudo gem install bundler;
+  if hash bundler 2>/dev/null; then
+      echo "Bundler already installed. Hooray."
+  else
+      echo "Bundler not installed - installing requires sudoer status."
+      echo "Enter password to proceed with Bundler installation"
+      sudo gem install bundler;
+  fi
+  echo "Verifying gems."
   bundle install;
 }
 
