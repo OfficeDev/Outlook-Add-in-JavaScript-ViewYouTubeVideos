@@ -9,7 +9,7 @@ This mail app allows users to conveniently view YouTube videos in the app pane i
 ## Prerequisites
 * Bash
 * Ruby 2.2.x+
-* Bundler
+* [Bundler](http://bundler.io/v1.5/gemfile.html)
 * OpenSSL
 * An email account on Exchange Server 2013
 * Client applications that support the mailbox capability in Office 2013, on the desktop and tablet form factors: Outlook 2013, Outlook Web App
