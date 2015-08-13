@@ -106,9 +106,13 @@ Manage apps menu|Install from file
 :-:|:-:
 ![](/static/menu_loc.png)|![](/static/menu_opt.png)
 
-Select the manifest.xml|Install and continue
-:-:|:-:
-![](/static/menu_chooser.png)|![](/static/menu_warn.png)
+Select the manifest.xml|
+:-:|
+![](/static/menu_chooser.png)|
+
+Install and continue|
+:-:|
+![](/static/menu_warn.png)|
 
 ## See it in action
 To demonstrate the functionality of the Add-In, you'll need to use the Office Outlook native client.
