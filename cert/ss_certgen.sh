@@ -51,10 +51,10 @@ function clean {
 }
 
 ## Main
-init;
-gen_pk;
-gen_csr;
-strip_pass;
-gen_cert;
-cpup;
-clean;
+   init \
+&& gen_pk \
+&& gen_csr \
+&& strip_pass \
+&& gen_cert \
+&& cpup \
+&& clean;
