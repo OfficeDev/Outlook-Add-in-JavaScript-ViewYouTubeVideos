@@ -49,8 +49,8 @@ function inform_cert {
 }
 
 ## Main
-   clean \
-&& sleep 1 \
+clean \
+sleep 1 \
 && exec_bundler \
 && sleep 1 \
 && generate_manifest \
