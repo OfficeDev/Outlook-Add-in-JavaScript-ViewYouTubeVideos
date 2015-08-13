@@ -108,7 +108,11 @@ Select the manifest.xml|Install and continue
 :-:|:-:
 ![](/static/menu_chooser.png)|![](/static/menu_warn.png)
 
-* Crack open your Outlook native client and run it
+## See it in action
+To demonstrate the functionality of the Add-In, you'll need to use the Office Outlook native client.
+* Open your office native client
+* Email yourself a link to a YouTube video - Need a [suggestion?](http://www.youtube.com/watch?v=oEx5lmbCKtY)
+* Expand the Add-In pane to see a preview
 
 ## Questions and comments
 * If you have any trouble running this sample, please [log an issue](https://github.com/OfficeDev/https://github.com/OfficeDev/Outlook-Add-in-Javascript-ViewYouTubeVideos/issues).
