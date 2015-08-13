@@ -51,7 +51,9 @@ In Office 2013, the mailbox capability is supported in the Outlook rich client a
     
 3. The mail also requests the ReadItem permission in the manifest file, so that it can run regular expressions, which is further discussed below.
 
+```xml
     <Permissions>ReadItem</Permissions>
+```
     
 4. The host application activates this mail app when the selected message or appointment contains a URL to a YouTube video. It does so by first reading on startup the manifest.xml file which specifies an activation rule that includes a regular expression to look for such a URL:
 
