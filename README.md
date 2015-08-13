@@ -100,6 +100,9 @@ Open Safari|
 ![](/static/add_trust.png)|
 
 ## Install the Add-In to Office 365
+Installation of this sample Add-In requires access to Outlook on the web.
+Installation can be performed from Settings > Manage apps
+
 Manage apps menu|Install from file
 :-:|:-:
 ![](/static/menu_loc.png)|![](/static/menu_opt.png)
