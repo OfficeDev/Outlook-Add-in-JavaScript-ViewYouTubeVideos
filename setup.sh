@@ -49,12 +49,12 @@ function inform_cert {
 }
 
 ## Main
-clean \
-sleep 1 \
-&& exec_bundler \
-&& sleep 1 \
-&& generate_manifest \
-&& sleep 1 \
-&& generate_sinatra \
-&& sleep 1 \
-&& inform_cert;
+clean
+sleep 1
+exec_bundler
+sleep 1
+generate_manifest
+sleep 1
+generate_sinatra
+sleep 1
+inform_cert;
