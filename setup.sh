@@ -15,7 +15,14 @@ T_PORT='<?bash $port ?>';
 
 # Cleans any previously generated manifests
 function clean {
+  echo "Cleaning project files"
   [[ -f "$MANIFEST" ]] && rm $MANIFEST;
+}
+
+# Install dependencies
+function exec_bundler {
+  echo "Checking dependencies"
+  bundle install;
 }
 
 # Generates an app manifest for this machine
@@ -43,6 +50,8 @@ function inform_cert {
 
 ## Main
 clean;
+sleep 1;
+exec_bundler;
 sleep 1;
 generate_manifest;
 sleep 1;
