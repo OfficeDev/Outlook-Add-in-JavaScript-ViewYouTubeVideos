@@ -14,7 +14,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler
   rack
   sinatra
 
