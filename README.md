@@ -90,6 +90,9 @@ From the project root, run:
     $ rackup
 
 ## Trust your self-signed certificate
+Before Outlook will transmit any potentially sensitive data to our Add-In, its SSL Certificate is verified for trust (authentic, not expired). By taking steps to ensure SSL/TLS is used with a valid certificate by Add-Ins, Microsoft is working to protect the privacy of your Office 365 data.
+
+Because this sample uses a local server and [self-signed certificate](https://en.wikipedia.org/wiki/Self-signed_certificate) you must first establish 'trust' between your localhost and the self-signed certificate. Any modern web browser will alert the user to certificate discrepencies - many too provide a mechanism for inspecting and forcing trust. After starting your local server, open your web browser of choice and navigate to a locally hosted url (eg ```https://0.0.0.0:8443/youtube.html```) - at this point you may be presented with a certificate warning: this is the certificate for which we wish to add trust.
 
 Open Safari|
 :-:|
