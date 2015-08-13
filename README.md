@@ -84,9 +84,9 @@ Open Safari|
 :-:|
 ![](/static/show_cert.png)|
 
-|'Trust' your self-signed certificate
-|:-:
-|![](/static/add_trust.png)
+'Trust' your self-signed certificate|
+:-:|
+![](/static/add_trust.png)|
 
 * Fire up the server
 * Install
