@@ -22,7 +22,7 @@ function clean {
 # Install dependencies
 function exec_bundler {
   echo "Checking dependencies"
-  gem install bundler;
+  sudo gem install bundler;
   bundle install;
 }
 
