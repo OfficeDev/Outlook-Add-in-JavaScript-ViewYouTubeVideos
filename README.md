@@ -92,30 +92,28 @@ From the project root, run:
     $ rackup
 
 ## Trust your self-signed certificate
-Before Outlook will transmit any potentially sensitive data to our Add-In, its SSL Certificate is verified for trust (authentic, not expired). By taking steps to ensure SSL/TLS is used with a valid certificate by Add-Ins, Microsoft is working to protect the privacy of your Office 365 data.
+Because this sample uses a local server and [self-signed certificate](https://en.wikipedia.org/wiki/Self-signed_certificate) you must first establish 'trust' between your localhost and the self-signed certificate. Before Outlook will transmit any potentially sensitive data to any Add-In, its SSL Certificate is verified for trust.  This requirement helps protect the privacy of your Office 365 data. Any modern web browser will alert the user to certificate discrepancies, and many also provide a mechanism for inspecting and establishing trust. After starting your local server, open your web browser of choice and navigate to the locally hosted URL specified in your manifest.xml file. (By default, the setup.sh script in this sample specifies this URL as ```https://0.0.0.0:8443/youtube.html```.) At this point you may be presented with a certificate warning. You need to trust this certificate.
 
-Because this sample uses a local server and [self-signed certificate](https://en.wikipedia.org/wiki/Self-signed_certificate) you must first establish 'trust' between your localhost and the self-signed certificate. Any modern web browser will alert the user to certificate discrepencies - many too provide a mechanism for inspecting and forcing trust. After starting your local server, open your web browser of choice and navigate to a locally hosted url (eg ```https://0.0.0.0:8443/youtube.html```) - at this point you may be presented with a certificate warning: this is the certificate for which we wish to add trust.
-
-Open Safari|
+Open Safari (if you're on Mac OS)|
 :-:|
 ![](/static/show_cert.png)|
 
-'Trust' your self-signed certificate|
+Select 'Always trust' your self-signed certificate|
 :-:|
 ![](/static/add_trust.png)|
 
 ## Install the Add-In to Office 365
 Installation of this sample Add-In requires access to Outlook on the web. Installation can be performed from Settings > Manage apps.
 
-Manage apps menu|Install from file
+Select 'Settings' and 'Manage apps' menu|Install from file
 :-:|:-:
 ![](/static/menu_loc.png)|![](/static/menu_opt.png)
 
-Select the manifest.xml|
+Select the manifest.xml file|
 :-:|
 ![](/static/menu_chooser.png)|
 
-Install and continue|
+Select 'Install' and then 'Continue'|
 :-:|
 ![](/static/menu_warn.png)|
 
