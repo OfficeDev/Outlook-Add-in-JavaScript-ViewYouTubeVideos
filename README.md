@@ -25,61 +25,103 @@ This mail app allows users to conveniently view YouTube videos in the app pane i
 
 The main code files for this mail app are ```manifest.xml``` and ```youtube.html```, along with the JavaScript library and string files for apps for Office, and a logo image file. The following is a high level summary of how the mail app works:
 
-1. This mail app specifies in the ```manifest.xml``` file that it requires a host application that supports the mailbox capability:
+This mail app specifies in the ```manifest.xml``` file that it requires a host application that supports the mailbox capability:
 
-    <Capabilities>
-        <Capability Name="Mailbox"/>
-    </Capabilities>
+```xml
+<Capabilities>
+    <Capability Name="Mailbox"/>
+</Capabilities>
+```
 
-In Office 2013, the mailbox capability is supported in the Outlook rich client and Outlook Web App.
-2. The mail specifies in the manifest file its support for the desktop and tablet form factors. This further determines that in Office 2013, the applications that can host this mail app are the Outlook rich client and Outlook Web App.
+In Office 2013, the mailbox capability is supported in the Outlook rich client and Outlook Web App. The mail specifies in the manifest file its support for the desktop and tablet form factors. This further determines that in Office 2013, the applications that can host this mail app are the Outlook rich client and Outlook Web App.
 
-    <DesktopSettings>
-        <!-- Change the following line to specify the web server where the HTML file is hosted. -->
-        <SourceLocation DefaultValue="https://webserver/YouTube/YouTube.htm"/>
-        <RequestedHeight>216</RequestedHeight>
-    </DesktopSettings>
-    <TabletSettings>
-        <!-- Change the following line to specify the web server where the HTML file is hosted. -->
-        <SourceLocation DefaultValue="https://webserver/YouTube/YouTube.htm"/>
-        <RequestedHeight>216</RequestedHeight>
-    </TabletSettings>
-3. The mail also requests the ReadItem permission in the manifest file, so that it can run regular expressions, which is further discussed below.
+```xml
+<DesktopSettings>
+    <!-- Change the following line to specify the web server where the HTML file is hosted. -->
+    <SourceLocation DefaultValue="https://webserver/YouTube/YouTube.htm"/>
+    <RequestedHeight>216</RequestedHeight>
+</DesktopSettings>
+<TabletSettings>
+    <!-- Change the following line to specify the web server where the HTML file is hosted. -->
+    <SourceLocation DefaultValue="https://webserver/YouTube/YouTube.htm"/>
+    <RequestedHeight>216</RequestedHeight>
+</TabletSettings>
+```
+    
+The mail also requests the ReadItem permission in the manifest file, so that it can run regular expressions, which is further discussed below.
 
+```xml
     <Permissions>ReadItem</Permissions>
+```
     
-4. The host application activates this mail app when the selected message or appointment contains a URL to a YouTube video. It does so by first reading on startup the manifest.xml file which specifies an activation rule that includes a regular expression to look for such a URL:
+The host application activates this mail app when the selected message or appointment contains a URL to a YouTube video. It does so by first reading on startup the manifest.xml file which specifies an activation rule that includes a regular expression to look for such a URL:
 
-    <Rule xsi:type="ItemHasRegularExpressionMatch" PropertyName="BodyAsPlaintext" RegExName="VideoURL" RegExValue="http://(((www\.)?youtube\.com/watch\?v=)|(youtu\.be/))[a-zA-Z0-9_-]{11}"/>
+```xml
+<Rule xsi:type="ItemHasRegularExpressionMatch" PropertyName="BodyAsPlaintext" RegExName="VideoURL" RegExValue="http://(((www\.)?youtube\.com/watch\?v=)|(youtu\.be/))[a-zA-Z0-9_-]{11}"/>
+```
     
-5. The mail app defines an initialize function which is an event handler for the initialize event. When the run-time environment is loaded, the initialize event is fired, and the initialize function calls the main function of the mail app, init, as shown in the code below:
+The mail app defines an initialize function which is an event handler for the initialize event. When the run-time environment is loaded, the initialize event is fired, and the initialize function calls the main function of the mail app, init, as shown in the code below:
 
-        Office.initialize = function () {
-          init(Office.context.mailbox.item.getRegExMatches().VideoURL);
-        }
+```javascript
+Office.initialize = function () {
+    init(Office.context.mailbox.item.getRegExMatches().VideoURL);
+}
+```
 
 The ```getRegExMatches``` method of the selected item returns an array of strings that match the regular expression ```VideoURL```, which is specified in the ```manifest.xml``` file. In this case, that array contains URLs to videos on YouTube.
 
-6. The init function and the rest of the ```youtube.html``` file take as an input parameter that array of YouTube URLs and dynamically build the HTML to display the corresponding thumbnail and details for each video.
+The init function and the rest of the ```youtube.html``` file take as an input parameter that array of YouTube URLs and dynamically build the HTML to display the corresponding thumbnail and details for each video.
 
 This dynamically built HTML displays the first video in a YouTube embedded player, together with details about the video. The app pane also displays the thumbnails of any subsequent videos. The end user can choose a thumbnail to view any of the videos in the YouTube embedded player, without leaving the host application.
 
-## Configure, build, and run
-* Check it out
-* Run the configure script
-* Add the self signed cert to Keychain (or similar) - just make it 'trusted'
-* Fire up the server
-* Install
+## Setup
+Shipped with this sample is a ```setup.sh``` - this setup file does the following:
+* [Generates the ```manifest.xml```](https://github.com/OfficeDev/Outlook-Add-in-JavaScript-ViewYouTubeVideos/blob/master/setup.sh#L22)
+* [Generates the ```app.rb```](https://github.com/OfficeDev/Outlook-Add-in-JavaScript-ViewYouTubeVideos/blob/master/setup.sh#L29)
+* [Optionally](https://github.com/OfficeDev/Outlook-Add-in-JavaScript-ViewYouTubeVideos/blob/master/setup.sh#L34) generates a [self-signed certificate](https://github.com/OfficeDev/Outlook-Add-in-JavaScript-ViewYouTubeVideos/blob/master/cert/ss_certgen.sh#L53)
+
+To run the script, type at your POSIX-compliant terminal:
+
+    $ bash setup.sh
+    
+## Start the server
+From the project root, run:
+
+    $ rackup
+
+## Trust your self-signed certificate
+Before Outlook will transmit any potentially sensitive data to our Add-In, its SSL Certificate is verified for trust (authentic, not expired). By taking steps to ensure SSL/TLS is used with a valid certificate by Add-Ins, Microsoft is working to protect the privacy of your Office 365 data.
+
+Because this sample uses a local server and [self-signed certificate](https://en.wikipedia.org/wiki/Self-signed_certificate) you must first establish 'trust' between your localhost and the self-signed certificate. Any modern web browser will alert the user to certificate discrepencies - many too provide a mechanism for inspecting and forcing trust. After starting your local server, open your web browser of choice and navigate to a locally hosted url (eg ```https://0.0.0.0:8443/youtube.html```) - at this point you may be presented with a certificate warning: this is the certificate for which we wish to add trust.
+
+Open Safari|
+:-:|
+![](/static/show_cert.png)|
+
+'Trust' your self-signed certificate|
+:-:|
+![](/static/add_trust.png)|
+
+## Install the Add-In to Office 365
+Installation of this sample Add-In requires access to Outlook on the web. Installation can be performed from Settings > Manage apps.
 
 Manage apps menu|Install from file
 :-:|:-:
 ![](/static/menu_loc.png)|![](/static/menu_opt.png)
 
-Select the manifest.xml|Install and continue
-:-:|:-:
-![](/static/menu_chooser.png)|![](/static/menu_warn.png)
+Select the manifest.xml|
+:-:|
+![](/static/menu_chooser.png)|
 
-* Crack open your Outlook native client and run it
+Install and continue|
+:-:|
+![](/static/menu_warn.png)|
+
+## See it in action
+To demonstrate the functionality of the Add-In, you'll need to use the Office Outlook native client.
+* Open your office native client
+* Email yourself a link to a YouTube video - Need a [suggestion?](http://www.youtube.com/watch?v=oEx5lmbCKtY)
+* Expand the Add-In pane to see a preview
 
 ## Questions and comments
 * If you have any trouble running this sample, please [log an issue](https://github.com/OfficeDev/https://github.com/OfficeDev/Outlook-Add-in-Javascript-ViewYouTubeVideos/issues).
