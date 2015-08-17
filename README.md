@@ -1,7 +1,7 @@
 # Outlook-Add-in-JavaScript-ViewYouTubeVideos
 
 ## Summary
-This Outlook add-in allows users to view YouTube videos in the add-in pane in Outlook if the selected email message or appointment contains a URL to a video on YouTube. It also contains a setup script that deploys the add-in to a Ruby web server. The following figure is a screen shot of the YouTube add-in activated for a message in the Reading Pane.
+This Outlook Add-in allows users to view YouTube videos in the add-in pane in Outlook if the selected email message or appointment contains a URL to a video on YouTube. It also contains a setup script that deploys the add-in to a Ruby web server. The following figure is a screen shot of the YouTube add-in activated for a message in the Reading Pane.
 <br />
 <br />
 ![](/static/pic1.png)
@@ -91,7 +91,7 @@ From the project root, run:
     $ rackup
 
 ## Trust your self-signed certificate
-Because this sample uses a local server and [self-signed certificate](https://en.wikipedia.org/wiki/Self-signed_certificate), you must first establish 'trust' between your localhost and the self-signed certificate. Before Outlook will transmit any potentially sensitive data to any Add-In, its SSL Certificate is verified for trust.  This requirement helps protect the privacy of your data. Any modern web browser will alert the user to certificate discrepancies, and many also provide a mechanism for inspecting and establishing trust. After starting your local server, open your web browser of choice and navigate to the locally hosted URL specified in your manifest.xml file. (By default, the setup.sh script in this sample specifies this URL as ```https://0.0.0.0:8443/youtube.html```.) At this point you may be presented with a certificate warning. You need to trust this certificate.
+Because this sample uses a local server and [self-signed certificate](https://en.wikipedia.org/wiki/Self-signed_certificate), you must first establish 'trust' between your localhost and the self-signed certificate. Before Outlook will transmit any potentially sensitive data to any add-in, its SSL Certificate is verified for trust.  This requirement helps protect the privacy of your data. Any modern web browser will alert the user to certificate discrepancies, and many also provide a mechanism for inspecting and establishing trust. After starting your local server, open your web browser of choice and navigate to the locally hosted URL specified in your manifest.xml file. (By default, the setup.sh script in this sample specifies this URL as ```https://0.0.0.0:8443/youtube.html```.) At this point you may be presented with a certificate warning. You need to trust this certificate.
 
 Open Safari (if you're on Mac OS)|
 :-:|
@@ -101,8 +101,8 @@ Select 'Always trust' your self-signed certificate|
 :-:|
 ![](/static/add_trust.png)|
 
-## Install the Add-In to Office 365
-Installation of this sample Add-In requires access to Outlook on the web. Installation can be performed from Settings > Manage apps.
+## Install the add-in to Office 365
+Installation of this sample add-in requires access to Outlook on the web. Installation can be performed from Settings > Manage apps.
 
 Select 'Settings' and 'Manage apps' menu|Install from file
 :-:|:-:
@@ -117,10 +117,10 @@ Select 'Install' and then 'Continue'|
 ![](/static/menu_warn.png)|
 
 ## See it in action
-To demonstrate the functionality of the Add-In, you'll need to use the Office Outlook 2013 native client.
+To demonstrate the functionality of the add-in, you'll need to use the Office Outlook 2013 native client.
 * Open Outlook 2013
 * Email yourself a link to a YouTube video - Need a [suggestion?](http://www.youtube.com/watch?v=oEx5lmbCKtY)
-* Expand the Add-In pane to see a preview
+* Expand the add-in pane to see a preview
 
 ## Questions and comments
 * If you have any trouble running this sample, please [log an issue](https://github.com/OfficeDev/https://github.com/OfficeDev/Outlook-Add-in-Javascript-ViewYouTubeVideos/issues).
