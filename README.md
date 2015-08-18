@@ -1,19 +1,20 @@
 # Outlook-Add-in-JavaScript-ViewYouTubeVideos
 
 ## Summary
-This Outlook Add-in allows users to view YouTube videos in the add-in pane in Outlook if the selected email message or appointment contains a URL to a video on YouTube. It also contains a setup script that deploys the add-in to a Ruby web server. The following figure is a screen shot of the YouTube add-in activated for a message in the Reading Pane.
+This Outlook Add-in allows users to view YouTube videos in the add-in pane in Outlook if the selected email message or appointment contains a URL to a video on YouTube. It also contains a setup script that deploys the add-in to a Ruby web server running on a Mac. The following figure is a screen shot of the YouTube add-in activated for a message in the Reading Pane.
 <br />
 <br />
 ![](/static/pic1.png)
 
 ## Prerequisites
+* Mac OS X 10.10 or later
 * Bash
 * Ruby 2.2.x+
 * [Bundler](http://bundler.io/v1.5/gemfile.html)
 * OpenSSL
 * A computer running Exchange 2013 with at least one email account, or an Office 365 account. You can sign up for [an Office 365 Developer subscription](http://aka.ms/ro9c62) and get an Office 365 account through it.
 * Any browser that supports ECMAScript 5.1, HTML5, and CSS3, such as Internet Explorer 9, Chrome 13, Firefox 5, Safari 5.0.6, or a later version of these browsers.
-* Outlook 2013
+* Outlook 2016 for Mac
 
 ## Key components of the sample
 * ```/LICENSE.txt``` The terms and conditions of using this distributable
@@ -93,7 +94,7 @@ From the project root, run:
 ## Trust your self-signed certificate
 Because this sample uses a local server and [self-signed certificate](https://en.wikipedia.org/wiki/Self-signed_certificate), you must first establish 'trust' between your localhost and the self-signed certificate. Before Outlook will transmit any potentially sensitive data to any add-in, its SSL Certificate is verified for trust.  This requirement helps protect the privacy of your data. Any modern web browser will alert the user to certificate discrepancies, and many also provide a mechanism for inspecting and establishing trust. After starting your local server, open your web browser of choice and navigate to the locally hosted URL specified in your manifest.xml file. (By default, the setup.sh script in this sample specifies this URL as ```https://0.0.0.0:8443/youtube.html```.) At this point you may be presented with a certificate warning. You need to trust this certificate.
 
-Open Safari (if you're on Mac OS)|
+Open Safari|
 :-:|
 ![](/static/show_cert.png)|
 
