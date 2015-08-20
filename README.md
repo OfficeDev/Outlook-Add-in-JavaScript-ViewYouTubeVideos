@@ -128,6 +128,7 @@ To demonstrate the functionality of the add-in, you'll need to use the Office Ou
 * Questions about Office Add-in development in general should be posted to [Stack Overflow](http://stackoverflow.com/questions/tagged/office-addins). Make sure that your questions or comments are tagged with [office-addins].
 
 ## Additional resources
+* [More Add-in samples](https://github.com/OfficeDev?utf8=%E2%9C%93&query=-Add-in)
 * [Outlook Add-ins](https://dev.office.com/code-samples#?filters=web,outlook)
 * [Outlook API](https://dev.outlook.com/)
 * [Code Samples - Office Dev Center](https://dev.office.com/code-samples#?filters=web,outlook)
