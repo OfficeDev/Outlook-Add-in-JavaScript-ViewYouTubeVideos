@@ -17,12 +17,12 @@ This Outlook Add-in allows users to view YouTube videos in the add-in pane in Ou
 * Outlook 2016 for Mac
 
 ## Key components of the sample
-* ```/LICENSE.txt``` The terms and conditions of using this distributable
-* ```/config.ru``` Rack config
-* ```setup.sh``` Setup script to generate ```app.rb```, ```manifest.xml```, and optionally, a certificate
-* ```/cert/ss_certgen.sh``` Self-signed certificate generating script
-* ```/public/res/js/strings_en-us.js``` US English localization
-* ```/public/res/js/strings_fr-fr.js``` French localization
+* [```LICENSE.txt```](LICENSE.txt) The terms and conditions of using this distributable
+* [```config.ru```](config.ru) Rack config
+* [```setup.sh```](setup.sh) Setup script to generate ```app.rb```, ```manifest.xml```, and optionally, a certificate
+* [```cert/ss_certgen.sh```](cert/ss_certgen.sh) Self-signed certificate generating script
+* [```public/res/js/strings_en-us.js```](public/res/js/strings_en-us.js) US English localization
+* [```public/res/js/strings_fr-fr.js```](public/res/js/strings_fr-fr.js) French localization
 
 ## Description of the code
 
