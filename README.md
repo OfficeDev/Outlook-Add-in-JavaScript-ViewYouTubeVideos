@@ -4,7 +4,7 @@
 This Outlook Add-in allows users to view YouTube videos in the add-in pane in Outlook if the selected email message or appointment contains a URL to a video on YouTube. It also contains a setup script that deploys the add-in to a Ruby web server running on a Mac. The following figure is a screen shot of the YouTube add-in activated for a message in the Reading Pane.
 <br />
 <br />
-![](/static/pic1.png)
+![Outlook Addin running a YouTube video in the mail item](/static/pic1.png)
 
 ## Prerequisites
 * Mac OS X 10.10 or later
@@ -96,26 +96,26 @@ Because this sample uses a local server and [self-signed certificate](https://en
 
 Open Safari|
 :-:|
-![](/static/show_cert.png)|
+![Safari security diloag to validate the certificate](/static/show_cert.png)|
 
 Select 'Always trust' your self-signed certificate|
 :-:|
-![](/static/add_trust.png)|
+![Safari security diloag to always trust the Contoso certificate](/static/add_trust.png)|
 
 ## Install the add-in to Office 365
 Installation of this sample add-in requires access to Outlook on the web. Installation can be performed from Settings > Manage apps.
 
 Select 'Settings' and 'Manage apps' menu|Install from file
 :-:|:-:
-![](/static/menu_loc.png)|![](/static/menu_opt.png)
+![Settings dropdown for manage apps](/static/menu_loc.png)|![add from a file settings property page](/static/menu_opt.png)
 
 Select the manifest.xml file|
 :-:|
-![](/static/menu_chooser.png)|
+![add from a file properties page setting the manifest name](/static/menu_chooser.png)|
 
 Select 'Install' and then 'Continue'|
 :-:|
-![](/static/menu_warn.png)|
+![add from a file properties page setting confirmation to add](/static/menu_warn.png)|
 
 ## See it in action
 To demonstrate the functionality of the add-in, you'll need to use the Office Outlook 2013 native client.
