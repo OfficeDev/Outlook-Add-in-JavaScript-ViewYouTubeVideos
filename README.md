@@ -12,7 +12,7 @@ This Outlook Add-in allows users to view YouTube videos in the add-in pane in Ou
 * Ruby 2.2.x+
 * [Bundler](http://bundler.io/v1.5/gemfile.html)
 * OpenSSL
-* A computer running Exchange 2013 with at least one email account, or an Office 365 account. You can sign up for [an Office 365 Developer subscription](http://aka.ms/ro9c62) and get an Office 365 account through it.
+* A computer running Exchange 2013 with at least one email account, or an Office 365 account. You can [join the Office 365 Developer Program and get a free 1 year subscription to Office 365](https://aka.ms/devprogramsignup).
 * Any browser that supports ECMAScript 5.1, HTML5, and CSS3, such as Chrome, Firefox, or Safari.
 * Outlook 2016 for Mac
 
