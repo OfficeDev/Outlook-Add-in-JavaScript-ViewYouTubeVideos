@@ -1,3 +1,18 @@
+---
+topic: sample
+products:
+- Outlook
+- Office 365
+languages:
+- HTML
+- JavaScript
+- Ruby
+extensions:
+  contentType: samples
+  technologies:
+  - Add-ins
+  createdDate: 8/11/2015 3:48:02 PM
+---
 # Outlook-Add-in-JavaScript-ViewYouTubeVideos
 
 ## Summary
