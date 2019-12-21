@@ -13,7 +13,8 @@ extensions:
   - Add-ins
   createdDate: 8/11/2015 3:48:02 PM
 ---
-# Outlook-Add-in-JavaScript-ViewYouTubeVideos
+# Outlook add-in: View YouTube Videos
+
 
 ## Summary
 This Outlook Add-in allows users to view YouTube videos in the add-in pane in Outlook if the selected email message or appointment contains a URL to a video on YouTube. It also contains a setup script that deploys the add-in to a Ruby web server running on a Mac. The following figure is a screen shot of the YouTube add-in activated for a message in the Reading Pane.
